@@ -6,16 +6,28 @@ public class Generation : MonoBehaviour {
 
     public Object prefab;
 
+    public int prefabsToGenerate;
+
     public float generationRate;
 
 	// Use this for initialization
 	void Start () {
-        InvokeRepeating("Generate", 0, generationRate);
+        Invoke("Generate", 0);
 	}
 
-    void Generate()
+    void GenerateInstantiate()
     {
         Rigidbody parent = GetComponent<Rigidbody>();
         Instantiate(prefab, parent.position, parent.rotation);
+    }
+
+    void Generate()
+    {
+        if(prefabsToGenerate != 0)
+        {
+            GenerateInstantiate();
+            prefabsToGenerate = Mathf.Max(prefabsToGenerate, 0) - 1;
+            Invoke("Generate", generationRate);
+        }
     }
 }
