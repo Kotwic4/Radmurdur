@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour {
 
@@ -37,7 +38,7 @@ public class TimeManager : MonoBehaviour {
 
     public void RestartTime()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 	
 	void UpdateTime (float newTime) {

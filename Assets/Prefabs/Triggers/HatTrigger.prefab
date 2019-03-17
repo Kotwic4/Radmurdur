@@ -25,9 +25,10 @@ GameObject:
   - component: {fileID: 54434690288087324}
   - component: {fileID: 82691728364652700}
   - component: {fileID: 114770690205127938}
+  - component: {fileID: 114286903315166310}
   m_Layer: 0
-  m_Name: AudioTrigger
-  m_TagString: Untagged
+  m_Name: HatTrigger
+  m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +60,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1feef4ef8b19e7842919755e098efc7e, type: 2}
+  - {fileID: 2100000, guid: 845b33991387ec445bf4a7577beff532, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -193,6 +194,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114286903315166310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1793056616455676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef50b2dd8d672d4a9680aabae85f7b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!114 &114770690205127938
 MonoBehaviour:
   m_ObjectHideFlags: 1
