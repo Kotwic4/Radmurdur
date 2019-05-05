@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class AudioTrigger : MonoBehaviour {
-
+public class AudioTrigger : MonoBehaviour
+{
     private AudioSource audioData;
     private BallType.BallTypeEnum myType;
 
@@ -15,13 +13,13 @@ public class AudioTrigger : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject collisionGameObject = collision.gameObject;
+        var collisionGameObject = collision.gameObject;
         if (collisionGameObject.CompareTag("Ball"))
         {
-            BallType.BallTypeEnum ballType = collisionGameObject.GetComponent<BallType>().type;
-            if(ballType == myType)
+            var ballType = collisionGameObject.GetComponent<BallType>().type;
+            if (ballType == myType)
             {
-                 audioData.Play();
+                audioData.Play();
             }
         }
     }

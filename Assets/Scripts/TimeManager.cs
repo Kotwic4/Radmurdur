@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TimeManager : MonoBehaviour {
-
+public class TimeManager : MonoBehaviour
+{
     private float fixedTimeDiff = 0.02f;
 
     public GameObject startButton;
@@ -13,16 +11,18 @@ public class TimeManager : MonoBehaviour {
     public bool timeOnStart;
 
 
-	// Use this for initialization
-	void Start () {
-        if(timeOnStart)
+    // Use this for initialization
+    private void Start()
+    {
+        if (timeOnStart)
         {
             StartTime();
-        } else
+        }
+        else
         {
             StopTime();
         }
-	}
+    }
 
     public void StopTime()
     {
@@ -40,13 +40,14 @@ public class TimeManager : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-	
-	void UpdateTime (float newTime) {
+
+    private void UpdateTime(float newTime)
+    {
         Time.timeScale = newTime;
         Time.fixedDeltaTime = newTime * fixedTimeDiff;
     }
 
-    void UpdateButtons (bool timeRunning)
+    private void UpdateButtons(bool timeRunning)
     {
         startButton.SetActive(!timeRunning);
         stopButton.SetActive(timeRunning);
