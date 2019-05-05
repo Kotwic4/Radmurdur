@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 114770690205127938}
   - component: {fileID: 114783516746570264}
   m_Layer: 0
-  m_Name: KickTrigger
+  m_Name: Kick1Trigger
   m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793056616455676}
-  m_LocalRotation: {x: -0, y: -0, z: -0.23450147, w: 0.9721158}
+  m_LocalRotation: {x: 0, y: 0, z: -0.23449741, w: 0.97211677}
   m_LocalPosition: {x: -12.26, y: -2.33, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 1}
   m_Children: []
@@ -75,7 +75,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f9ac63f6ca86024c870a4fabe3dc93d, type: 2}
+  - {fileID: 2100000, guid: c7529ab9839bc01459a55c8c3fe26e3d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
