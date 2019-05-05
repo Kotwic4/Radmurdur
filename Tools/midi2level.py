@@ -4,15 +4,15 @@ from pathlib import Path
 
 from mido import MidiFile, tick2second, MidiTrack, bpm2tempo, MetaMessage
 
-Trigger = namedtuple('Trigger', ['note', 'time'])
+Beat = namedtuple('Beat', ['note', 'time'])
 
 
 def main(args):
-    for t in read_triggers(args.midi_file, args.bpm):
+    for t in read_beats(args.midi_file, args.bpm):
         print(t)
 
 
-def read_triggers(midi_file, bpm):
+def read_beats(midi_file, bpm):
     tempo = bpm2tempo(bpm)
 
     with MidiFile(file=midi_file) as mid:
@@ -29,12 +29,12 @@ def read_triggers(midi_file, bpm):
             now += msg.time
 
             if not isinstance(msg, MetaMessage):
-                yield Trigger(note=msg.note,
+                yield Beat(note=msg.note,
                               time=tick2second(now, mid.ticks_per_beat, tempo))
 
 
 def read_args():
-    p = argparse.ArgumentParser(description='MIDI to Trigger Array Converter')
+    p = argparse.ArgumentParser(description='MIDI to Level Class Converter')
     p.add_argument('midi_file', metavar='MIDI', type=argparse.FileType('rb'),
                    help='Input MIDI file')
     p.add_argument('-c', '--class', dest='class_name', metavar='CLASS_NAME',
