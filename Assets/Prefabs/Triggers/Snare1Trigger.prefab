@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 114770690205127938}
   - component: {fileID: 114259027044032840}
   m_Layer: 0
-  m_Name: SnareTrigger
+  m_Name: Snare1Trigger
   m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,4 +231,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef50b2dd8d672d4a9680aabae85f7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 4
