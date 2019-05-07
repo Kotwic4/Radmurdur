@@ -3,7 +3,7 @@
 public class AudioTrigger : MonoBehaviour
 {
     private AudioSource audioData;
-    private BallType.BallTypeEnum myType;
+    private Note myType;
 
     private void Start()
     {
