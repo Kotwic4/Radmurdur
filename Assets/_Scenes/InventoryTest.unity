@@ -380,6 +380,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1633773038398463157, guid: d26c086250e14d54da6fa49a3ea26785,
+        type: 3}
+      propertyPath: amounts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633773038398463157, guid: d26c086250e14d54da6fa49a3ea26785,
+        type: 3}
+      propertyPath: amounts.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633773038398463157, guid: d26c086250e14d54da6fa49a3ea26785,
+        type: 3}
+      propertyPath: amounts.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633773038398463157, guid: d26c086250e14d54da6fa49a3ea26785,
+        type: 3}
+      propertyPath: amounts.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1633773038398463158, guid: d26c086250e14d54da6fa49a3ea26785,
         type: 3}
       propertyPath: m_IsKinematic

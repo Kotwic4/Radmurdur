@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
             obj.transform.parent = gameObject.transform;
             obj.GetComponent<Rigidbody>().isKinematic = true;
             obj.GetComponent<Slot>().prefab = prefabs[i];
+            obj.GetComponent<Slot>().amount = amounts[i];
         }
     }
 }
