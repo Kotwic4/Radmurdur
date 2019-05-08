@@ -22,6 +22,8 @@ public class Inventory : MonoBehaviour
             obj.GetComponent<Slot>().inventory = gameObject;
 
             objects[i] = obj;
+
+            obj.transform.SetParent(gameObject.transform.GetChild(0).gameObject.transform, false);
         }
     }
 
