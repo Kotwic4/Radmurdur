@@ -14,10 +14,11 @@ GameObject:
   - component: {fileID: 23818476712477692}
   - component: {fileID: 54434690288087324}
   - component: {fileID: 82691728364652700}
+  - component: {fileID: 1233982298709053234}
   - component: {fileID: 114770690205127938}
   - component: {fileID: 114128172052031352}
   m_Layer: 0
-  m_Name: CymbalTrigger
+  m_Name: Break1Trigger
   m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,6 +208,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1233982298709053234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793056616455676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88aff33c8c40ac4c803d9b0c1218414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0
+  inInventory: 0
+  inventory: {fileID: 0}
+  prefab: {fileID: 0}
 --- !u!114 &114770690205127938
 MonoBehaviour:
   m_ObjectHideFlags: 0
