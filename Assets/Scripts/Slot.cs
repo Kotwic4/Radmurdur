@@ -29,14 +29,11 @@ public class Slot : MonoBehaviour
         Rigidbody parent = GetComponent<Rigidbody>();
 		obj = (GameObject) Instantiate(prefab, parent.position, parent.rotation);
 		obj.transform.parent = gameObject.transform;
-        Debug.Log(obj.tag);
 
         if (obj.CompareTag("Wall")) {
-            // Debug.Log("WALL");
             obj.transform.localScale = new Vector3(40, 10, 10);
         }
         else {
-            // Debug.Log("OTHER");
             obj.transform.localScale = new Vector3(10, 10, 10);
         }
         
