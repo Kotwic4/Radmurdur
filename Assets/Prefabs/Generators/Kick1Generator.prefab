@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 65775806904175700}
   - component: {fileID: 23189089017653006}
   - component: {fileID: 54523855627446106}
+  - component: {fileID: 7841068581861978401}
   - component: {fileID: 114204566041432488}
   - component: {fileID: 114581344511293276}
   m_Layer: 0
@@ -110,6 +111,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7841068581861978401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451749745394104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2f0c1d539e0142b8bf2a92de5e48e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0
+  configuration: {fileID: 5693314515470648294, guid: 9dbfce840b899954bbc320ccf8940af9,
+    type: 3}
+  canvas: {fileID: 0}
 --- !u!114 &114204566041432488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +142,8 @@ MonoBehaviour:
   prefab: {fileID: 1736811567470474, guid: bd9d7ded5f6a17a49aaddf29a5dca2f8, type: 3}
   prefabsToGenerate: 0
   generationRate: 0.8
+  initialSpeed: {x: 0, y: 0, z: 0}
+  useGravity: 0
 --- !u!114 &114581344511293276
 MonoBehaviour:
   m_ObjectHideFlags: 0
