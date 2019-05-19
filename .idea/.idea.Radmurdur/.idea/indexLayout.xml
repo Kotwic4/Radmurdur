@@ -13,6 +13,8 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>.venv</Path>
+      <Path>.vscode</Path>
+      <Path>AssetSources</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
