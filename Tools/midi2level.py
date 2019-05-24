@@ -78,7 +78,7 @@ def read_args():
                    help='Drum rack file, defaults to a file named same as class next to MIDI file')
     p.add_argument('-o', '--output', metavar='OUTPUT', type=argparse.FileType('w', encoding='UTF-8'),
                    help='Output C# class file path, defaults to a file named same as class next to MIDI file')
-    p.add_argument('--bpm', metavar='N', default=120,
+    p.add_argument('--bpm', metavar='N', default=120.0, type=float,
                    help='Beats per minute, defaults to 120')
 
     args = p.parse_args()
