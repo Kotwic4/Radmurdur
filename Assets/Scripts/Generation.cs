@@ -21,7 +21,7 @@ public class Generation : MonoBehaviour
     private void Generate()
     {
         if (prefabsToGenerate <= 0) return;
-        
+
         GenerateInstantiate();
         prefabsToGenerate -= 1;
         Invoke("Generate", generationRate);
