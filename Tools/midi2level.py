@@ -54,7 +54,7 @@ def read_beats(mid, tempo):
     for msg in track:
         now += msg.time
 
-        if not isinstance(msg, MetaMessage):
+        if not isinstance(msg, MetaMessage) and msg.type == 'note_on':
             yield Beat(note=msg.note,
                        time=tick2second(now, mid.ticks_per_beat, tempo))
 
