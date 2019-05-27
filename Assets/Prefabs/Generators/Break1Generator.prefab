@@ -142,7 +142,7 @@ MonoBehaviour:
   prefab: {fileID: 1736811567470474, guid: 571b426078802d24b84d0cabaefff0c0, type: 3}
   prefabsToGenerate: 1
   generationRate: 0.8
-  initialSpeed: {x: 0, y: -0, z: 0}
+  initialSpeed: {x: 0, y: 0, z: 0}
   useGravity: 1
 --- !u!114 &114316732326095606
 MonoBehaviour:

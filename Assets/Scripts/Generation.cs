@@ -12,7 +12,6 @@ public class Generation : MonoBehaviour
 
     public bool useGravity = true;
 
-    // Use this for initialization
     private void Start()
     {
         Invoke("Generate", 0);
@@ -27,11 +26,26 @@ public class Generation : MonoBehaviour
         Invoke("Generate", generationRate);
     }
 
-    private void GenerateInstantiate()
+    public void GenerateInstantiate(Vector3 initialSpeed, bool useGravity)
     {
-        var parent = GetComponent<Rigidbody>();
-        var obj = (GameObject) Instantiate(prefab, parent.position, parent.rotation);
+        Rigidbody parent = GetComponent<Rigidbody>();
+        GameObject obj = (GameObject) Instantiate(prefab, parent.position, parent.rotation);
         obj.GetComponent<Rigidbody>().velocity = initialSpeed;
         obj.GetComponent<Rigidbody>().useGravity = useGravity;
+    }
+
+    public void GenerateInstantiate(Vector3 initialSpeed)
+    {
+        GenerateInstantiate(initialSpeed, useGravity);
+    }
+
+    public void GenerateInstantiate(bool useGravity)
+    {
+        GenerateInstantiate(initialSpeed, useGravity);
+    }
+
+    public void GenerateInstantiate()
+    {
+        GenerateInstantiate(initialSpeed, useGravity);
     }
 }
