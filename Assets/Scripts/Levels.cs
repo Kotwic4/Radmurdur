@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Levels : MonoBehaviour
@@ -22,6 +23,11 @@ public class Levels : MonoBehaviour
     }
 
     public void OnButtonClick(int id) {
-        Debug.Log("Level: " + id);
+        SceneManager.LoadScene("Level" + id);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

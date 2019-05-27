@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
@@ -60,5 +60,10 @@ public class TimeManager : MonoBehaviour
     {
         startButton.SetActive(!timeRunning);
         stopButton.SetActive(timeRunning);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

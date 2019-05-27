@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -17,11 +18,11 @@ public class MainMenu : MonoBehaviour
 
     void OnStartCampaignMode()
     {
-        Debug.Log("OnStartCampaignMode");
+        SceneManager.LoadScene("ChooseLevel");
     }
 
     void OnStartSandboxMode()
     {
-        Debug.Log("OnStartSandboxMode");
+        SceneManager.LoadScene("Sandbox");
     }
 }
