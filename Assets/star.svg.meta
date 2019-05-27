@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 54d5f9a4b59d41740b356c3b2e45b0ec
+guid: 25855a7d9bd1a0d4eba0edcf5bb701b7
 ScriptedImporter:
   fileIDToRecycleName:
-    100000: gameObject/Logo
-    400000: gameObject/Logo/Transform
-    21200000: gameObject/Logo/SpriteRenderer
+    100002: gameObject/star
+    400002: gameObject/star/Transform
+    21200002: gameObject/star/SpriteRenderer
     21300000: sprite
     100100000: gameObject
   externalObjects: {}
   userData: 
   assetBundleName: 
-  assetBundleVariant:
+  assetBundleVariant: 
   script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
   svgType: 0
   texturedSpriteMeshType: 0
@@ -51,5 +51,5 @@ ScriptedImporter:
         y: 0
         width: 0
         height: 0
-      spriteID: e06b27b025cc46b4582be1be14c366ae
+      spriteID: 66e7ddec574cffd45a547cc2a0b7f8f4
     PhysicsOutlines: []
