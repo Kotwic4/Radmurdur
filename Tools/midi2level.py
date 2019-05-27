@@ -11,7 +11,14 @@ class Beat(NamedTuple):
     time: float
 
 
-def template(class_name: str, quarter_duration: float, beats: List[Beat], drumrack):
+def template(
+    class_name: str,
+    quarter_duration: float,
+    duration: float,
+    bpm: float,
+    beats: List[Beat],
+    drumrack
+):
     beats_code = f",\n{' ' * 8}".join(f"new Beat(Note.{drumrack[b.note]}, {b.time})" for b in beats)
     return f"""
 using LevelData;
@@ -22,6 +29,8 @@ public class {class_name} : IDrumsPattern
         {beats_code}
     }};
     public double QuarterDuration {{ get {{ return {quarter_duration}; }} }}
+    public double Duration {{ get {{ return {duration}; }} }}
+    public double Bpm {{ get {{ return {bpm}; }} }}
     public Beat[] Beats {{ get {{ return BeatsArray; }} }}
 }}
 """
@@ -37,6 +46,7 @@ def main(args):
         if len(mid.tracks) != 1:
             raise Exception('Expected single MIDI track')
 
+        duration = getattr(args, 'duration', mid.length)
         tempo = bpm2tempo(args.bpm)
         quarter_duration = tick2second(mid.ticks_per_beat, mid.ticks_per_beat, tempo)
 
@@ -44,7 +54,14 @@ def main(args):
         beats.sort(key=lambda b: (b.time, b.note))
 
     with args.output:
-        args.output.write(template(args.class_name, quarter_duration, beats, drumrack))
+        args.output.write(template(
+            args.class_name,
+            quarter_duration,
+            duration,
+            args.bpm,
+            beats,
+            drumrack
+        ))
 
 
 def read_beats(mid, tempo):
@@ -80,6 +97,8 @@ def read_args():
                    help='Output C# class file path, defaults to a file named same as class next to MIDI file')
     p.add_argument('--bpm', metavar='N', default=120.0, type=float,
                    help='Beats per minute, defaults to 120')
+    p.add_argument('--duration', metavar='S', type=float,
+                   help='Track duration in seconds, by default computes from MIDI file')
 
     args = p.parse_args()
 
