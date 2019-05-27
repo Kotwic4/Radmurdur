@@ -17,7 +17,6 @@
       <Path>AssetSources</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>Tools</Path>
       <Path>obj</Path>
     </explicitExcludes>
