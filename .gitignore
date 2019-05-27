@@ -116,6 +116,7 @@ $RECYCLE.BIN/
 .idea/**/tasks.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/**/indexLayout.xml
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
