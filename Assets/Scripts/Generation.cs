@@ -4,7 +4,7 @@ public class Generation : MonoBehaviour
 {
     public Object prefab;
 
-    public int prefabsToGenerate = 1;
+    public int prefabsToGenerate = 0;
 
     public float generationRate = .8f;
 
@@ -12,15 +12,30 @@ public class Generation : MonoBehaviour
 
     public bool useGravity = true;
 
+    public bool isGenerating = false;
+
     private void Start()
     {
-        Invoke("Generate", 0);
+        Generate();
+    }
+
+    private void Update()
+    {
+        if (prefabsToGenerate > 0 && !isGenerating)
+        {
+            Generate();
+        }
     }
 
     private void Generate()
     {
-        if (prefabsToGenerate <= 0) return;
+        if (prefabsToGenerate <= 0)
+        {
+            isGenerating = false;
+            return;
+        }
 
+        isGenerating = true;
         GenerateInstantiate();
         prefabsToGenerate -= 1;
         Invoke("Generate", generationRate);

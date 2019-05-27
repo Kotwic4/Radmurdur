@@ -12,6 +12,21 @@ EditorBuildSettings:
     path: Assets/_Scenes/Levels/Sandbox.unity
     guid: ddf92fcb7892aeb4ba5163c4b0d0f079
   - enabled: 1
-    path: Assets/_Scenes/Levels/Choose Level.unity
+    path: Assets/_Scenes/Levels/ChooseLevel.unity
     guid: 5e19616bf2cf0b3499ea32aaee79fddb
+  - enabled: 1
+    path: Assets/_Scenes/Levels/Level1.unity
+    guid: af6c2dc1a2cd1fd4faabca486a456d21
+  - enabled: 1
+    path: Assets/_Scenes/Levels/Level2.unity
+    guid: 3ecb1314880905144a169585614c00e3
+  - enabled: 1
+    path: Assets/_Scenes/Levels/Level3.unity
+    guid: aa3023edafbe220418526ad66bacec68
+  - enabled: 1
+    path: Assets/_Scenes/Levels/Level4.unity
+    guid: 1586ddb234352b34aa995ffb208606a3
+  - enabled: 1
+    path: Assets/_Scenes/Levels/Level5.unity
+    guid: bcd637e1dfc236647a6741f6292fb5e2
   m_configObjects: {}

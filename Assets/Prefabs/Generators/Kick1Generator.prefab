@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 7841068581861978401}
   - component: {fileID: 114204566041432488}
   - component: {fileID: 114581344511293276}
+  - component: {fileID: 7380681361372407744}
+  - component: {fileID: 5326849585854994466}
   m_Layer: 0
   m_Name: Kick1Generator
   m_TagString: Generator
@@ -123,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba2f0c1d539e0142b8bf2a92de5e48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enabled: 0
+  enabled: 1
   configuration: {fileID: 5693314515470648294, guid: 9dbfce840b899954bbc320ccf8940af9,
     type: 3}
   canvas: {fileID: 0}
@@ -140,10 +142,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1736811567470474, guid: bd9d7ded5f6a17a49aaddf29a5dca2f8, type: 3}
-  prefabsToGenerate: 1
+  prefabsToGenerate: 0
   generationRate: 0.8
   initialSpeed: {x: 0, y: 0, z: 0}
   useGravity: 1
+  isGenerating: 0
 --- !u!114 &114581344511293276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +160,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+--- !u!114 &7380681361372407744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451749745394104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88aff33c8c40ac4c803d9b0c1218414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0
+  inInventory: 0
+  inventory: {fileID: 0}
+  prefab: {fileID: 0}
+--- !u!114 &5326849585854994466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451749745394104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8608283e85b824dbc2568f4c0074a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0
+  speed: 10
