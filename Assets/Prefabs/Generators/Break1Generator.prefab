@@ -31,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451749745394104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.099, y: 9.954, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -123,8 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba2f0c1d539e0142b8bf2a92de5e48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enabled: 0
   configuration: {fileID: 5693314515470648294, guid: 9dbfce840b899954bbc320ccf8940af9,
     type: 3}
+  canvas: {fileID: 0}
 --- !u!114 &114204566041432488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,10 +140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1736811567470474, guid: 571b426078802d24b84d0cabaefff0c0, type: 3}
-  prefabsToGenerate: 0
+  prefabsToGenerate: 1
   generationRate: 0.8
-  initialSpeed: {x: 0, y: 0, z: 0}
-  useGravity: 0
+  initialSpeed: {x: 0, y: -0, z: 0}
+  useGravity: 1
 --- !u!114 &114316732326095606
 MonoBehaviour:
   m_ObjectHideFlags: 0

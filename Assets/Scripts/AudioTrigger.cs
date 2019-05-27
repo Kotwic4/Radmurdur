@@ -1,26 +1,18 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(BallType))]
 public class AudioTrigger : MonoBehaviour
 {
-    private AudioSource audioData;
-    private Note myType;
-
-    private void Start()
-    {
-        myType = GetComponent<BallType>().type;
-        audioData = GetComponent<AudioSource>();
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         var collisionGameObject = collision.gameObject;
-        if (collisionGameObject.CompareTag("Ball"))
-        {
-            var ballType = collisionGameObject.GetComponent<BallType>().type;
-            if (ballType == myType)
-            {
-                audioData.Play();
-            }
-        }
+        if (!collisionGameObject.CompareTag("Ball")) return;
+        
+        var ballType = collisionGameObject.GetComponent<BallType>().type;
+        var myType = GetComponent<BallType>().type;
+        if (ballType != myType) return;
+        
+        GetComponent<AudioSource>().Play();
     }
 }

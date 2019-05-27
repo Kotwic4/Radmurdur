@@ -9,7 +9,8 @@ public class Configuration : MonoBehaviour
     private Button saveButton;
     private Button cancelButton;
 
-    void Start() {
+    void Start()
+    {
         amountInput = transform.Find("Amount").GetComponent<InputField>();
         rateInput = transform.Find("Rate").GetComponent<InputField>();
         saveButton = transform.Find("Save").GetComponent<Button>();
@@ -22,14 +23,16 @@ public class Configuration : MonoBehaviour
         rateInput.text = generator.GetComponent<Generation>().generationRate.ToString();
     }
 
-    void OnSave() {
+    void OnSave()
+    {
         generator.GetComponent<Generation>().prefabsToGenerate = int.Parse(amountInput.text.ToString());
         generator.GetComponent<Generation>().generationRate = int.Parse(amountInput.text.ToString());
 
         OnCancel();
     }
 
-    void OnCancel() {
+    void OnCancel()
+    {
         Destroy(gameObject);
     }
 }

@@ -13,7 +13,8 @@ public class Inventory : MonoBehaviour
         Rigidbody parent = GetComponent<Rigidbody>();
         objects = new GameObject[prefabs.Length];
 
-        for (int i = 0; i < prefabs.Length; i++) {
+        for (int i = 0; i < prefabs.Length; i++)
+        {
             var obj = (GameObject) Instantiate(slotPrefab, parent.position, parent.rotation);
             obj.transform.parent = gameObject.transform;
             obj.GetComponent<Rigidbody>().isKinematic = true;
@@ -27,17 +28,19 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void remove(Object prefab) {
+    public void remove(Object prefab)
+    {
         var index = System.Array.FindIndex(prefabs, p => p == prefab);
         var obj = objects[index];
-        
+
         obj.GetComponent<Slot>().remove();
     }
 
-    public void add(Object prefab) {
+    public void add(Object prefab)
+    {
         var index = System.Array.FindIndex(prefabs, p => p == prefab);
         var obj = objects[index];
-        
+
         obj.GetComponent<Slot>().add();
     }
 }

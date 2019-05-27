@@ -6,7 +6,8 @@ public class MainMenu : MonoBehaviour
     private Button campaignModeButton;
     private Button sandboxModeButton;
 
-    void Start() {
+    void Start()
+    {
         campaignModeButton = transform.Find("CampaignMode").GetComponent<Button>();
         sandboxModeButton = transform.Find("SandboxMode").GetComponent<Button>();
 
@@ -14,11 +15,13 @@ public class MainMenu : MonoBehaviour
         sandboxModeButton.onClick.AddListener(OnStartSandboxMode);
     }
 
-    void OnStartCampaignMode() {
+    void OnStartCampaignMode()
+    {
         Debug.Log("OnStartCampaignMode");
     }
 
-    void OnStartSandboxMode() {
+    void OnStartSandboxMode()
+    {
         Debug.Log("OnStartSandboxMode");
     }
 }

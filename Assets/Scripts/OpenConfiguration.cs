@@ -10,8 +10,10 @@ public class OpenConfiguration : MonoBehaviour
     private bool shown = false;
     private GameObject configurationGameObject;
 
-    void Update() {
-        if (enabled && hover && Input.GetMouseButtonDown(1) && configurationGameObject == null) {
+    void Update()
+    {
+        if (enabled && hover && Input.GetMouseButtonDown(1) && configurationGameObject == null)
+        {
             Rigidbody parent = GetComponent<Rigidbody>();
             configurationGameObject = (GameObject) Instantiate(configuration, parent.position, parent.rotation);
             configurationGameObject.GetComponent<Configuration>().generator = gameObject;
@@ -23,10 +25,10 @@ public class OpenConfiguration : MonoBehaviour
 
     void OnMouseOver()
     {
-        hover = true; 
+        hover = true;
     }
 
-     void OnMouseExit()
+    void OnMouseExit()
     {
         hover = false;
     }
