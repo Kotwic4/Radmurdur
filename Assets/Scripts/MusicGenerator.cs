@@ -12,11 +12,15 @@ public class MusicGenerator : MonoBehaviour
     public GameObject snare1Generator;
     public GameObject snare2Generator;
 
+    public GameObject scoreBoard;
+
     public Vector3 initialSpeed;
 
     public bool useGravity;
 
     public string levelName;
+
+    public float levelWaitForFinish = 2.0f;
 
     private string GenerationFuctionName(Note noteType)
     {
@@ -43,11 +47,23 @@ public class MusicGenerator : MonoBehaviour
     {
         var drumsData = (IDrumsPattern) this.GetComponent(levelName);
         var beats = drumsData.Beats;
+        float maxBeatTime = 0;
         foreach(var beat in beats)
         {
             string fuctionName = GenerationFuctionName(beat.Note);
             Invoke(fuctionName, (float)beat.StartTime);
+            if(maxBeatTime < (float)beat.StartTime)
+            {
+                maxBeatTime = (float)beat.StartTime;
+            }
         }
+        maxBeatTime += levelWaitForFinish;
+        Invoke("Finish", maxBeatTime);
+    }
+
+    private void Finish()
+    {
+        scoreBoard.GetComponent<ScoreManager>().finishLevel();
     }
 
     private void Generate(GameObject generator)

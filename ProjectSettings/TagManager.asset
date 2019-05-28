@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Generator
   - Ball
+  - ScoreWindow
   layers:
   - Default
   - TransparentFX
