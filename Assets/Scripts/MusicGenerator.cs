@@ -51,10 +51,11 @@ public class MusicGenerator : MonoBehaviour
         foreach(var beat in beats)
         {
             string fuctionName = GenerationFuctionName(beat.Note);
-            Invoke(fuctionName, (float)beat.StartTime);
-            if(maxBeatTime < (float)beat.StartTime)
+            var beatStartTime = (float)beat.StartTime;
+            Invoke(fuctionName, beatStartTime);
+            if(maxBeatTime < beatStartTime)
             {
-                maxBeatTime = (float)beat.StartTime;
+                maxBeatTime = beatStartTime;
             }
         }
         maxBeatTime += levelWaitForFinish;

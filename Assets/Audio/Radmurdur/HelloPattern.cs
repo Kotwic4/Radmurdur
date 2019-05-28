@@ -2,7 +2,7 @@
 using LevelData;
 using UnityEngine;
 
-public class HelloPattern : MonoBehaviour, IDrumsPattern 
+public class HelloPattern : MonoBehaviour, IDrumsPattern
 {
     private static readonly Beat[] BeatsArray = {
         new Beat(Note.Kick1, 0.0),

@@ -377,6 +377,11 @@ PrefabInstance:
       propertyPath: levelWaitForFinish
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1757974695757291809, guid: cc022f0913c839f4ca6712e3c045c446,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1347503293}
     - target: {fileID: 335428715, guid: cc022f0913c839f4ca6712e3c045c446, type: 3}
       propertyPath: m_TagString
       value: ScoreWindow
@@ -473,41 +478,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2914588473362701238, guid: 97ddc170d81b11b4b817a1bdf4764797,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5873735585021919228, guid: 97ddc170d81b11b4b817a1bdf4764797,
         type: 3}
       propertyPath: scoreBoard
       value: 
       objectReference: {fileID: 2767844059073681324, guid: 557386f4110c16f428ae3aff1f4fbcd9,
         type: 3}
-    - target: {fileID: 1546753477441598838, guid: 97ddc170d81b11b4b817a1bdf4764797,
+    - target: {fileID: 5873735585021919228, guid: 97ddc170d81b11b4b817a1bdf4764797,
         type: 3}
-      propertyPath: prefabs.Array.size
-      value: 1
+      propertyPath: warmUpTimeSeconds
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1546753477441598838, guid: 97ddc170d81b11b4b817a1bdf4764797,
-        type: 3}
-      propertyPath: amounts.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546753477441598838, guid: 97ddc170d81b11b4b817a1bdf4764797,
-        type: 3}
-      propertyPath: amounts.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546753477441598838, guid: 97ddc170d81b11b4b817a1bdf4764797,
-        type: 3}
-      propertyPath: prefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 1736811567470474, guid: 571b426078802d24b84d0cabaefff0c0,
-        type: 3}
     - target: {fileID: 1076218363, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914588473362701238, guid: 97ddc170d81b11b4b817a1bdf4764797,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1076218367, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
       propertyPath: badSoundLoss
@@ -537,6 +526,27 @@ PrefabInstance:
       propertyPath: ThreeStarScore
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 1546753477441598838, guid: 97ddc170d81b11b4b817a1bdf4764797,
+        type: 3}
+      propertyPath: prefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546753477441598838, guid: 97ddc170d81b11b4b817a1bdf4764797,
+        type: 3}
+      propertyPath: amounts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546753477441598838, guid: 97ddc170d81b11b4b817a1bdf4764797,
+        type: 3}
+      propertyPath: amounts.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546753477441598838, guid: 97ddc170d81b11b4b817a1bdf4764797,
+        type: 3}
+      propertyPath: prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1736811567470474, guid: 571b426078802d24b84d0cabaefff0c0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
 --- !u!1 &5770652505041812122 stripped

@@ -22,8 +22,9 @@ def template(
     beats_code = f",\n{' ' * 8}".join(f"new Beat(Note.{drumrack[b.note]}, {b.time})" for b in beats)
     return f"""
 using LevelData;
+using UnityEngine;
 
-public class {class_name} : IDrumsPattern
+public class {class_name} : MonoBehaviour, IDrumsPattern
 {{
     private static readonly Beat[] BeatsArray = {{
         {beats_code}
