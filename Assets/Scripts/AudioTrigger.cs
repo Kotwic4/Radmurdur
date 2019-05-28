@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(BallType))]
@@ -14,5 +14,12 @@ public class AudioTrigger : MonoBehaviour
         if (ballType != myType) return;
         
         GetComponent<AudioSource>().Play();
+
+        var scoreWindows = GameObject.FindGameObjectsWithTag("ScoreWindow");
+
+        foreach (GameObject scoreWindow in scoreWindows)
+        {
+            scoreWindow.GetComponent<ScoreTrigger>().playSound(myType);
+        }
     }
 }

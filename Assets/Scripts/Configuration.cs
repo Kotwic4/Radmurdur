@@ -26,7 +26,7 @@ public class Configuration : MonoBehaviour
     void OnSave()
     {
         generator.GetComponent<Generation>().prefabsToGenerate = int.Parse(amountInput.text.ToString());
-        generator.GetComponent<Generation>().generationRate = int.Parse(amountInput.text.ToString());
+        generator.GetComponent<Generation>().generationRate = float.Parse(rateInput.text.ToString());
 
         OnCancel();
     }
