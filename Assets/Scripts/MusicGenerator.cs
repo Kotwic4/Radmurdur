@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LevelData;
 
 public class MusicGenerator : MonoBehaviour
 {
@@ -15,9 +16,7 @@ public class MusicGenerator : MonoBehaviour
 
     public bool useGravity;
 
-    public float[] timestamps;
-
-    public Note[] types;
+    public string levelName;
 
     private string GenerationFuctionName(Note noteType)
     {
@@ -39,14 +38,15 @@ public class MusicGenerator : MonoBehaviour
                 return "";
         }
     }
-
-    // Start is called before the first frame update
+    
     private void Start()
     {
-        for(int i = 0; i < timestamps.Length; i++)
+        var drumsData = (IDrumsPattern) this.GetComponent(levelName);
+        var beats = drumsData.Beats;
+        foreach(var beat in beats)
         {
-            string fuctionName = GenerationFuctionName(types[i]);
-            Invoke(fuctionName, timestamps[i]);
+            string fuctionName = GenerationFuctionName(beat.Note);
+            Invoke(fuctionName, (float)beat.StartTime);
         }
     }
 
