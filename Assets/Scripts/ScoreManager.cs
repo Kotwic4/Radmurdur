@@ -50,11 +50,11 @@ public class ScoreManager : MonoBehaviour
         {
             starNumber = 1;
         }
-        if (currentScore > TwoStarScore)
+        if (currentScore >= TwoStarScore)
         {
             starNumber = 2;
         }
-        if (currentScore > ThreeStarScore)
+        if (currentScore >= ThreeStarScore)
         {
             starNumber = 3;
         }
