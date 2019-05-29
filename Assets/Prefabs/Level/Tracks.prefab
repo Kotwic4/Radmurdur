@@ -169,7 +169,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1757974695757291810}
   - component: {fileID: 1757974695757291809}
-  - component: {fileID: 821339123}
   m_Layer: 0
   m_Name: Tracks
   m_TagString: Untagged
@@ -223,18 +222,6 @@ MonoBehaviour:
   useGravity: 0
   levelName: HelloPattern
   levelWaitForFinish: 3
---- !u!114 &821339123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757974695757291811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 543281cf52169dd4e807042b2fa4a044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &176634089
 PrefabInstance:
   m_ObjectHideFlags: 0

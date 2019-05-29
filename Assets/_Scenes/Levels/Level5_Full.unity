@@ -1947,6 +1947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sandbox
       objectReference: {fileID: 0}
+    - target: {fileID: 1076218363, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5772354134167548902, guid: 97ddc170d81b11b4b817a1bdf4764797,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2018,10 +2022,6 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b371b6ae4d693564daf3bd2d6ce3711a, type: 3}
-    - target: {fileID: 1076218363, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2914588473362701238, guid: 97ddc170d81b11b4b817a1bdf4764797,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -2043,6 +2043,18 @@ PrefabInstance:
       propertyPath: scoreBoard
       value: 
       objectReference: {fileID: 5770652505041812122}
+    - target: {fileID: 1076218367, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
+      propertyPath: ThreeStarScore
+      value: 192
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076218367, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
+      propertyPath: TwoStarScore
+      value: 156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076218367, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
+      propertyPath: OneStarScore
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ddc170d81b11b4b817a1bdf4764797, type: 3}
 --- !u!1 &5770652505041812122 stripped
