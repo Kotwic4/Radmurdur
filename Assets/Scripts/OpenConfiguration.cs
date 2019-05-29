@@ -5,10 +5,24 @@ public class OpenConfiguration : MonoBehaviour
 {
     public bool enabled;
     public Object configuration;
-    public Canvas canvas;
+    private Canvas canvas;
     private bool hover = false;
     private bool shown = false;
     private GameObject configurationGameObject;
+
+    private void Start()
+    {
+        GameObject tempObject = GameObject.Find("Canvas");
+        if (tempObject != null)
+        {
+            //If we found the object , get the Canvas component from it.
+            canvas = tempObject.GetComponent<Canvas>();
+            if (canvas == null)
+            {
+                Debug.Log("Could not locate Canvas component on " + tempObject.name);
+            }
+        }
+    }
 
     void Update()
     {

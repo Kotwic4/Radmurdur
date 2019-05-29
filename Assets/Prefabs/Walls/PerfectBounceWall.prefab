@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 65711691024489268}
   - component: {fileID: 23580335736658142}
   - component: {fileID: 8484795472400408845}
+  - component: {fileID: 4843955601821233359}
   - component: {fileID: 2287615492713406234}
   m_Layer: 0
   m_Name: PerfectBounceWall
@@ -109,6 +110,20 @@ MonoBehaviour:
   inInventory: 0
   inventory: {fileID: 0}
   prefab: {fileID: 0}
+--- !u!114 &4843955601821233359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640362808286474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8608283e85b824dbc2568f4c0074a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0
+  speed: 10
 --- !u!54 &2287615492713406234
 Rigidbody:
   m_ObjectHideFlags: 0

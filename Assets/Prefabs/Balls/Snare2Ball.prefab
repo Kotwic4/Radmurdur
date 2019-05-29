@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 54424464942039728}
   - component: {fileID: 7612501513177990792}
   - component: {fileID: 114901798200364662}
+  - component: {fileID: 727646103332858633}
   m_Layer: 0
   m_Name: Snare2Ball
   m_TagString: Ball
@@ -139,3 +140,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 5
+--- !u!114 &727646103332858633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736811567470474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8608283e85b824dbc2568f4c0074a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0
+  speed: 10

@@ -60,10 +60,12 @@ public class Slot : MonoBehaviour
         if (amount > 0)
         {
             obj.GetComponent<DragAndDrop>().enabled = true;
+            obj.GetComponent<Rotate>().enabled = true;
         }
         else
         {
             obj.GetComponent<DragAndDrop>().enabled = false;
+            obj.GetComponent<Rotate>().enabled = false;
         }
     }
 }

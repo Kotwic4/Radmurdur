@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
@@ -32,7 +32,6 @@ public class TimeManager : MonoBehaviour
         UpdateTime(0.0f);
         UpdateButtons(false);
 
-        warmUpCounter.GetComponent<WarmUpCounterManager>().Stop();
         GetComponent<AudioSource>().Stop();
     }
 
@@ -41,7 +40,6 @@ public class TimeManager : MonoBehaviour
         UpdateTime(1.0f);
         UpdateButtons(true);
 
-        warmUpCounter.GetComponent<WarmUpCounterManager>().StartCounting(warmUpTimeSeconds);
         GetComponent<AudioSource>().PlayDelayed(warmUpTimeSeconds);
     }
 
@@ -60,5 +58,10 @@ public class TimeManager : MonoBehaviour
     {
         startButton.SetActive(!timeRunning);
         stopButton.SetActive(timeRunning);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
